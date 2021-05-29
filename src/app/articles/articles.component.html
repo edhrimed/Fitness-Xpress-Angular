@@ -1,0 +1,15 @@
+<h2>Detaille des  articles</h2>
+ 
+<div class="row">
+
+    <app-art *ngFor="let article of articleList" [articleFils] = "article"
+    (eventSupprimer)="supprimerArticle ($event)" >
+    </app-art>
+
+
+</div>
+
+ <button (click)="getStockZero()">Afficher le nombre de Stock Zero</button>  
+ <h3>Alert: {{stockZero}}</h3>
+   
+

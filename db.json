@@ -1,0 +1,154 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "nom": "PowerDot",
+      "quantite": 200,
+      "prix": 80,
+      "like": 0
+    },
+    {
+      "id": 2,
+      "nom": "Percussive Device",
+      "quantite": 0,
+      "prix": 120,
+      "like": 0
+    },
+    {
+      "id": 3,
+      "nom": "Wave Roller",
+      "quantite": 100,
+      "prix": 70,
+      "like": 0
+    },
+    {
+      "id": 4,
+      "nom": "Football",
+      "quantite": 300,
+      "prix": 70
+    },
+    {
+      "id": 110,
+      "nom": "HandBall",
+      "quantite": 100,
+      "prix": 50
+    },
+    {
+      "id": 11,
+      "nom": "PowerDot",
+      "quantite": 200,
+      "prix": 50
+    },
+    {
+      "id": 77,
+      "nom": "fghhtrh",
+      "quantite": 100,
+      "prix": 100
+    },
+    {
+      "nom": "Percussive Device",
+      "id": 588,
+      "quantite": 1500,
+      "prix": 200
+    },
+    {
+      "id": 120,
+      "nom": "PingPong",
+      "quantite": 120,
+      "prix": 5
+    },
+    {
+      "id": 10,
+      "nom": "Vibrator Belt",
+      "quantite": 1000,
+      "prix": 75
+    },
+    {
+      "id": 4144,
+      "nom": "ssdqsdsq",
+      "quantite": 84040,
+      "prix": 32
+    }
+  ],
+  "abonnes": [
+    {
+      "id": 1,
+      "login": "mimo2021",
+      "age": 30,
+      "email": "mimo2000@gmail.com",
+      "mobile": 22852963
+    },
+    {
+      "id": 2,
+      "login": "rtrhtrhgtg",
+      "age": 30,
+      "email": "hhtrtht@ergre.gt",
+      "mobile": 22852963
+    },
+    {
+      "id": 3,
+      "login": "samitch90",
+      "age": 40,
+      "email": "samsoum@yahoo.fr",
+      "mobile": 22471854
+    },
+    {
+      "id": 4,
+      "login": "Amirouss",
+      "age": 6,
+      "email": "amira@gmail.com",
+      "mobile": 478965236
+    },
+    {
+      "id": 120,
+      "login": "Ahmed2021",
+      "age": 20,
+      "email": "Ahmad2021@gmail.com",
+      "mobile": 20854963
+    },
+    {
+      "id": 58,
+      "login": "424tyutyuy",
+      "age": 12,
+      "email": "Ahmad2021@gmail.com",
+      "mobile": 12566398
+    },
+    {
+      "id": 15,
+      "login": "ZoubaSahli",
+      "age": 24,
+      "email": "zoubaBR@gmail.com",
+      "mobile": 58963852
+    },
+    {
+      "id": 10,
+      "login": "wssxzdcef",
+      "age": 25,
+      "email": "samsoum@yahoo.fr",
+      "mobile": 752528
+    }
+  ],
+  "training": [
+    {
+      "id": 1,
+      "nom": "Natation",
+      "date": "Lundi et Mercredi",
+      "prix": 300,
+      "club": "FX Lac2"
+    },
+    {
+      "id": 2,
+      "nom": "YOGA",
+      "date": "Samedi et Dimanche",
+      "prix": "250",
+      "club": "FX Ennaser"
+    },
+    {
+      "id": "1001",
+      "nom": "Booling",
+      "date": "Saturday",
+      "prix": 50,
+      "club": "Gammarth"
+    }
+  ]
+}

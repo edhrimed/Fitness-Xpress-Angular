@@ -1,0 +1,53 @@
+<div class="container">
+    <br>
+    <h3>Ajouter un article </h3>
+    <div>
+        <form>
+            <div class="form-group">
+                <label>ID</label>
+                <input type="number" class="form-control" name="id" [(ngModel)]="article.id">
+            </div>
+
+            <div class="form-group">
+                <label>Nom</label>
+                <input type="text" class="form-control" name="nom" [(ngModel)]="article.nom">
+            </div>
+
+            <div class="form-group">
+                <label>Quantite</label>
+                <input type="number" class="form-control" name="quantite" [(ngModel)]="article.quantite">
+            </div>
+
+            <div class="form-group">
+                <label>Prix</label>
+                <input type="number" class="form-control" name="prix" [(ngModel)]="article.prix">
+            </div>
+            <br>
+            <div>
+                <button class="btn btn-success" (click)="save()">Sauvgarder</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <br><br>
+    <h3>list des articles </h3>
+
+    <div class="row">
+
+        <div class="col-md-3" *ngFor="let a of listArticles">
+            <div class="card" style="width: 18rem;">
+                <img class="card" src="../../assets/pic2.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{a.nom}}</h5>
+                    <p class="card-text">Quantite: {{a.quantite}} </p>
+                    <p class="card-text">Prix: {{a.prix}} DT</p>
+                    <a href="#" class="btn btn-primary">Like</a>
+                </div>
+            </div>
+        </div>
+
+    </div><!--- card div -->
+    
+</div><!--- container div -->

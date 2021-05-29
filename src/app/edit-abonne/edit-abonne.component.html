@@ -1,0 +1,72 @@
+
+<h3>Mise a jour Abonnée</h3>
+<div  style="width: 400px;">
+ 
+
+
+    <form>
+
+      <div class="form-group">
+          <label>ID</label>
+          <input type="number" class="form-control" name="id" [(ngModel)]="abonne.id" 
+              required maxlength="4"> 
+         
+      </div>
+
+      <div class="form-group">
+          <label>Login</label>
+          <input type="text" class="form-control" name="login" [(ngModel)]="abonne.login" 
+              required minlength="8" 
+              pattern="[a-zA-Z0-9]+$" #l="ngModel">
+
+
+              <div class="alert alert-danger" *ngIf="l.invalid && l.touched">
+                  <div *ngIf="l.errors.required"> Nom abonne est obligatoire </div>
+                  <div *ngIf="l.errors.minlength"> login doit contient au moins 8 caracteres</div>
+              </div>
+
+
+      </div>
+
+      <div class="form-group">
+          <label>Age</label>
+          <input type="number" class="form-control" name="age" [(ngModel)]="abonne.age" 
+              required maxlength="2" #a="ngModel">
+
+
+              <div class="alert alert-danger" *ngIf="a.invalid && a.touched">
+                  <div *ngIf="a.errors.required"> Age est obligatoire </div>
+                  <div *ngIf="a.value>5"> Abonne doit etre ageé de 5 ans </div>
+              </div>
+
+
+      </div>
+
+      <div class="form-group">
+          <label>Email</label>
+          <input name="email" type="text" class="form-control" [(ngModel)]="abonne.email" #e="ngModel"
+          pattern="[a-zA-Z0-9]+@[a-zA-Z]+.[a-zA-Z]{2,3}">
+      </div>
+      <div class="alert alert-danger" *ngIf="e.invalid && e.touched">
+          <div *ngIf="e.errors.required">Email est obligatoire </div>
+          <div *ngIf="e.errors.pattern"> error: Format email non valide</div>
+      </div>
+
+      <div class="form-group">
+          <label>Mobile</label>
+          <input type="number" class="form-control" name="mobile" [(ngModel)]="abonne.mobile"
+          required minlength="8"
+          required maxlength="8"
+          pattern="[0-9]+$" #m="ngModel" >
+      </div>
+
+      <div class="alert alert-danger" *ngIf="m.invalid && m.touched">
+          <div *ngIf="m.errors.required">Numero mobile est obligatoire </div>
+          <div *ngIf="m.errors.pattern"> error: Numero non valide</div>
+      </div>
+      <br>
+      <button class="btn btn-success" (click)="updateAbonne()">Sauvgarder</button>
+
+
+  </form>
+  </div>

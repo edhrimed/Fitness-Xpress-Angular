@@ -1,0 +1,78 @@
+<div class="container">
+    
+        <h2>Training Type </h2>
+    
+       <div> <!--form div---> 
+        <form #f="ngForm">
+          <div class="form-group">
+
+            <label>ID (*)</label>
+            <input type="text" name="id" class="form-control"
+                   [(ngModel)]="training.id" required #i="ngModel">
+                   
+            <br>
+            <label>Nom Training (*)</label>
+            <input type="text" name="nom" class="form-control"
+                   [(ngModel)]="training.nom" required #t="ngModel"
+                   minlength="4" pattern="[a-zA-Z]+$">
+            <br>
+            <div class="alert alert-danger" *ngIf="t.invalid && t.touched ">
+              <div *ngIf="t.errors.required">nom est obligatoire</div>
+              <div *ngIf="t.errors.minlength"> error: longeur minimale est 4 lettres</div>
+              <div *ngIf="t.errors.pattern"> error: pattern</div>
+            </div>
+          </div>
+          <br>
+          <div class="form-group">
+            <label>Date (*)</label>
+            <input type="text" name="date" class="form-control"
+                   [(ngModel)]="training.date" required #d="ngModel">
+            <br>     
+             <div class="alert alert-danger" *ngIf="d.invalid && d.touched ">
+              Date est obligatoire
+            </div>
+            
+
+          <div class="form-group">
+            <label>Prix (*)</label>
+            <input type="number" name="prix" class="form-control"
+                   [(ngModel)]="training.prix" required #p="ngModel">
+            <br>
+            <div class="alert alert-danger" *ngIf="p.invalid && p.touched ">
+              prix est obligatoire
+            </div>
+            <div class="alert alert-danger" *ngIf="p.value<=0">
+                Valeur ne peut pas etre negatif
+            </div>
+          </div>
+          <label>Club (*)</label>
+          <input type="text" name="club" class="form-control"
+                 [(ngModel)]="training.club" required #c="ngModel">
+                 
+          <br>
+         
+          </div>
+        
+        </form>
+
+        <h3>list des Training </h3>
+
+        <div class="row">
+    
+            <div class="col-md-3" *ngFor="let t of listTraining">
+                <div class="card" style="width: 18rem;">
+                    <img class="card" src="../../assets/pic2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{t.nom}}</h5>
+                        <p class="card-text">Date: {{t.date}} </p>
+                        <p class="card-text">Prix: {{t.prix}} DT/Mois</p>
+                        <p class="card-text">Club: {{t.club}} </p>
+                        <a href="#" class="btn btn-primary">Like</a>
+                    </div>
+                </div>
+            </div>
+    
+        </div><!--- card div -->
+
+    </div> <!---form div-->    
+</div> <!--- Container Div-->

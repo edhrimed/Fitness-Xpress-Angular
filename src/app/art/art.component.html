@@ -1,0 +1,23 @@
+<div class="container">
+  <h3> Article</h3>
+
+  <div class="row">
+    <div>
+
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+          <img src="../../assets/pic9.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Nom: {{articleFils.nom}} </h5>
+            <p class="card-text"> Quantite: {{articleFils.quantite}} - Prix: {{articleFils.prix}} - Like:
+              {{articleFils.like}}</p>
+            <button class="btn btn-primary" (click)="sendNotifParent()"> Supprimer</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+ 
+  </div> <!-- card div-->
+
+</div> <!-- container div-->

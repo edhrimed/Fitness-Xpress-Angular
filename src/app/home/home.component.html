@@ -1,0 +1,42 @@
+<div class="container">
+<h2>Liste des articles</h2>
+
+<form>
+    <div class="form-group">
+      <label for="nom">Rechercher </label>
+      <input type="number"  name="prix" class="form-control" [(ngModel)]="prixMax" >
+  
+    </div>
+    <br>
+      <button type="submit" class="btn btn-primary">Submit</button>
+       
+  </form>
+
+ <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Quantité</th>
+        <th scope="col">Prix</th>
+        <th scope="col">Aimer</th>
+        <th scope="col">Action</th>
+        <th scope="col">Panier</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let Article of articleList; let i=index">
+      <tr   *ngIf="Article.prix < prixMax || prixMax==null" [style.color]="getColor(i)"> 
+        <th scope="row">{{Article.id}}</th>
+        <td> {{Article.nom}}</td>
+        <td> {{Article.quantite}}</td>
+        <td> {{Article.prix}}</td>
+        <td> {{Article.like}}</td>
+        <td> <button class="btn btn-warning" (click)="ajouterLike(Article)"> like </button> </td>
+        <td> <button class="btn btn-success" [disabled]="Article.quantite==0" (click)="acheterArticle(Article)"> Acheter </button> </td>
+        
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+  
